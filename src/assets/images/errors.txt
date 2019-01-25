@@ -1,0 +1,5 @@
+[1/25/2019, 10:09:27 AM] layer "半圆.png": Duplicate path: 半圆.png
+[1/25/2019, 10:09:27 AM] layer "完成.png": Duplicate path: 完成.png
+[1/25/2019, 10:09:27 AM] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
+[1/25/2019, 10:09:27 AM] layer "半圆.png": Duplicate path: 半圆.png
+[1/25/2019, 10:09:27 AM] layer "完成.png": Duplicate path: 完成.png
