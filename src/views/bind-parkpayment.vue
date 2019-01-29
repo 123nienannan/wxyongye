@@ -12,8 +12,8 @@
       <span>沪A3489</span>
     </div>
     <div class="btn">
-      <span class="keep" v-if="showKeep">车位续费</span>
-      <span class="decored">缴费记录</span>
+      <span class="keep" v-if="showKeep" @click="carkeep">车位续费</span>
+      <span class="decored" @click="paymentrecord">缴费记录</span>
     </div>
   </div>
 </template>
@@ -25,9 +25,18 @@ export default {
       showKeep:true
     }
   },
+  mounted() {
+
+  },
   methods: {
-    payment() {
+    payment () {
       this.$router.push({name:'temporaryStop'})
+    },
+    carkeep () {
+      this.$router.push({name:'carKeep'})
+    },
+    paymentrecord () {
+      this.$router.push({name:'paymentRecord'})
     }
   },
 }

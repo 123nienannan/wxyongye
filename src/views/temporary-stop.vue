@@ -16,29 +16,47 @@
       <span class="car">沪A3489</span>
     </div>
     <div class="enter-time">
-      <span>入场时间</span>
-      <span>2018/07/11 09:32</span>
+      <div><div class="icon"><img src="../assets/images/enter.png"></div>
+        入场时间</div>
+      <div>2018/07/11 09:32</div>
     </div>
     <div class="park-time">
-      <span>停车时长</span>
-      <span>10小时59分钟</span>
+      <div><div class="icon"><img src="../assets/images/park-time.png"></div>
+        停车时长</div>
+      <div>10小时59分钟</div>
     </div>
     <div class="need-money">
-      <span>所需费用</span>
-      <span>34元</span>
+      <div><div class="icon"><img src="../assets/images/icon-money.png"></div>
+        所需费用</div>
+      <div>34元</div>
+    </div>
+    <div class="instantly" @click="payment">
+      <div class="instantly_pic"><img src="../assets/images/wechat.png" alt=""></div>
+      立即支付
     </div>
   </div>
+
 </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
 
+    }
+  },
+  methods: {
+    payment() {
+      this.$router.push({name:'paymentSuccess'})
+    }
+  },
 }
 </script>
 
 <style lang="less" scoped>
 .temporary-stop {
+    position: relative;
     overflow-y: scroll;
     padding-top: 165px;
     top:0;
@@ -106,11 +124,13 @@ export default {
       font-size: 22px;
     }
     .foot {
+     box-sizing: border-box;
      width: 100%;
      background-color: #fff;
      border-radius: 24px 24px 0px 0px;
-     position: fixed;
+     position: absolute;
      bottom: 0;
+     left: 0;
      padding: 45px 54px 82px 60px;
      .unbind-car {
        padding-bottom: 56px;
@@ -135,23 +155,76 @@ export default {
        }
      }
      .enter-time {
+       position: relative;
+       padding-bottom: 54px;
        display: flex;
-       justify-content: space-around;
+       box-sizing: border-box;
+       justify-content: space-between;
        color: #333333;
        font-size: 28px;
+       .icon {
+         display: inline-block;
+         vertical-align: middle;
+         width: 36px;
+         height: 36px;
+         img {
+           width: 100%
+         }
+       }
      }
      .park-time {
+       position: relative;
+       padding-bottom: 54px;
        display: flex;
-       justify-content: space-around;
+       justify-content: space-between;
        color: #333333;
        font-size: 28px;
+       .icon {
+         display: inline-block;
+         vertical-align: middle;
+         width: 36px;
+         height: 36px;
+         img {
+           width: 100%
+         }
+       }
      }
      .need-money {
+       position: relative;
+       padding-bottom: 54px;
        display: flex;
-       justify-content: space-around;
+       justify-content: space-between;
        color: #333333;
        font-size: 28px;
+      .icon {
+         display: inline-block;
+         vertical-align: middle;
+         width: 36px;
+         height: 36px;
+         img {
+           width: 100%
+         }
+       }
+     }
+     .instantly {
+       height: 88px;
+       background-color: #f1c120;
+	     border-radius: 8px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        font-size: 30px;
+        color: #000;
+      .instantly_pic {
+        margin-right: 15px;
+        width: 36px;
+        height: 30px;
+        img {
+          width: 100%;
+        }
+       }
      }
     }
+
 }
 </style>
