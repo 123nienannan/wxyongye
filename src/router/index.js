@@ -17,7 +17,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect:'/haveStorage'
+      redirect:'/carKeep'
     },
     {
       path:'/bindparkpayment',

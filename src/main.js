@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import '@/assets/css/common.css'
 import '@/util/rem'
-import { Toast, Indicator  } from 'mint-ui'
+import { Toast, Indicator, DatetimePicker } from 'mint-ui'
+
 Vue.config.productionTip = false
 Vue.prototype.$toast = Toast
 Vue.prototype.$indicator = Indicator
+Vue.component(DatetimePicker.name, DatetimePicker);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

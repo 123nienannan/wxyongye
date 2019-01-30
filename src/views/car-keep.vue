@@ -1,7 +1,26 @@
 <template>
   <div class="car-keep">
      <div class="carkeep-top">
-
+        <div class="top-bar">
+          <div class="top-left">
+            C区203&nbsp;
+           <span><span><img src="../assets/images/car.png"></span>#1</span>
+           <img class="arrow" src="../assets/images/arrow.png">
+          </div>
+          <div class="top-right">续费记录</div>
+        </div>
+        <div class="peoplename">
+           <div class="picture"><img src="../assets/images/person.png"></div>
+           <span>张伯伦</span>
+        </div>
+        <div class="peopleaddress">
+           <div class="pic"><img src="../assets/images/floor.png"></div>
+           <span>19号楼1010室</span>
+        </div>
+        <div class="surplus-time">
+           <p>2019/ 01/01 到期</p>
+           剩余 <span>15</span> 天
+        </div>
      </div>
      <div class="carkeep-main">
        <p class="buy date">购买月数</p>
@@ -74,6 +93,94 @@ export default {
     height: 440px;
     background: url("../assets/images/background-colock.png") no-repeat;
     background-size: cover;
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
+      .top-left {
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        color: #fff;
+        span {
+          padding: 8px 9px;
+          font-size: 24px;
+          background-image: linear-gradient(135deg,
+            #3ea9fc 0%,
+            #2d79fb 100%);
+          border-radius: 4px;
+          span {
+            vertical-align: middle;
+            display: inline-block;
+            width: 29px;
+            height: 25px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .arrow {
+          margin-top: 20px;
+          margin-left: 29px;
+          width: 23px;
+          height: 12px;
+        }
+      }
+      .top-right {
+        color: #f1c120;
+        font-size: 26px;
+      }
+    }
+    .peoplename {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 43px;
+      .picture {
+        width: 32px;
+        height: 32px;
+        img {
+          width: 100%;
+        }
+      }
+      span {
+        font-size: 28px;
+        color: #fff;
+        padding-left: 25px;
+      }
+    }
+    .peopleaddress {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 26px;
+      .pic {
+        width: 32px;
+        height: 32px;
+        img {
+          width: 100%;
+        }
+      }
+      span {
+        font-size: 28px;
+        color: #fff;
+        padding-left: 25px;
+      }
+    }
+    .surplus-time {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      color: #fff;
+      font-size: 28px;
+      p {
+        margin-right: 46px;
+      }
+      span {
+        color: #f1c120;
+        font-size: 100px;
+      }
+    }
   }
   .carkeep-main {
     padding: 39px 49px 0;
